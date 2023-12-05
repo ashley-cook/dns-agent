@@ -9,7 +9,12 @@ public class DnsAgent {
         InetAddress.class.getModule().addOpens(InetAddress.class.getPackageName(), INameService.class.getModule());
 
         try {
-            INameService.install(new HostsFileFallbackResolver());
+            INameService.install(
+                    new FallbackNameService(
+                            new AdvancedHostsFileNameService(System.getProperty("agent.dns.hosts")),
+                            INameService.getPlatformNameService()
+                    )
+            );
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
