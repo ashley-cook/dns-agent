@@ -28,3 +28,5 @@ AAAA            *.my.example.domain     ::1
 CNAME           user.example.domain     my.example.domain
 CNAME           *.user.example.domain   my.example.domain   # I'm a hanging comment!
 ```
+
+Please note that only A, AAAA, and CNAME record types are currently implemented.
