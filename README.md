@@ -10,7 +10,7 @@ This is **not likely to work on Java 8** or below, and has only been tested on J
 
 Example JVM arguments are given:
 ```
--javaagent:dns-agent-1.1.jar -Dagent.dns.hosts=hosts.txt
+-javaagent:dns-agent-1.1.0.jar -Dagent.dns.hosts=hosts.txt
 ```
 
 The hosts file is inspired by [resolv_wrapper](https://cwrap.org/resolv_wrapper.html) and an example 
